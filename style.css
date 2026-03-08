@@ -1,0 +1,303 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg: #F9F6F1;
+    --text: #1C1C1C;
+    --muted: #8A8A8A;
+    --border: #E5E0D8;
+    --max-width: 960px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── NAV ── */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    background: var(--bg);
+    z-index: 100;
+}
+
+.nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--text);
+    text-decoration: none;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+nav ul a {
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+nav ul a:hover,
+nav ul a.active {
+    color: var(--muted);
+}
+
+.nav-icon {
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    transition: color 0.2s;
+}
+
+.nav-icon:hover {
+    color: var(--muted);
+}
+
+/* ── MAIN ── */
+main {
+    flex: 1;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+}
+
+/* ── ABOUT ── */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: start;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.75rem;
+    font-weight: 300;
+    line-height: 1.05;
+    margin-bottom: 0.6rem;
+}
+
+.tagline {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 2.5rem;
+}
+
+.bio p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+}
+
+.bio p:last-child {
+    margin-bottom: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 2px;
+    display: block;
+}
+
+/* ── WRITING ── */
+.page-header {
+    margin-bottom: 3rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.page-header h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.75rem;
+    font-weight: 300;
+}
+
+.writing-list {
+    list-style: none;
+}
+
+.writing-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.writing-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text);
+    text-decoration: none;
+    line-height: 1.4;
+}
+
+.writing-title:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.writing-meta {
+    font-size: 0.85rem;
+    color: #555;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.writing-pub {
+    display: block;
+    font-style: italic;
+    margin-bottom: 0.1rem;
+}
+
+.crimson-link {
+    margin-top: 2.5rem;
+}
+
+.crimson-link a {
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.crimson-link a:hover {
+    color: var(--text);
+}
+
+/* ── CONTACT ── */
+.contact-content {
+    max-width: 540px;
+}
+
+.contact-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.75rem;
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+}
+
+.contact-content p {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text);
+    margin-bottom: 2rem;
+}
+
+.contact-email {
+    display: inline-block;
+    font-size: 0.95rem;
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.social-links {
+    margin-top: 2.75rem;
+    display: flex;
+    gap: 2rem;
+}
+
+.social-links a {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: var(--text);
+}
+
+/* ── FOOTER ── */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 680px) {
+    nav {
+        padding: 1.5rem;
+    }
+
+    nav ul {
+        gap: 1.5rem;
+    }
+
+    main {
+        padding: 3rem 1.5rem;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .photo-placeholder {
+        max-width: 280px;
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .writing-item {
+        grid-template-columns: 1fr;
+        gap: 0.4rem;
+    }
+
+    .writing-meta {
+        text-align: left;
+    }
+}
