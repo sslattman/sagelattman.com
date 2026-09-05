@@ -5,7 +5,7 @@
 }
 
 :root {
-    --bg: #F9F6F1;
+    --bg: #dce0dc;
     --text: #1C1C1C;
     --muted: #8A8A8A;
     --border: #E5E0D8;
@@ -38,7 +38,7 @@ nav {
 
 .nav-name {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 400;
     letter-spacing: 0.02em;
     color: var(--text);
@@ -70,6 +70,12 @@ nav ul a {
 nav ul a:hover,
 nav ul a.active {
     color: var(--muted);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
 }
 
 .nav-icon {
@@ -127,6 +133,16 @@ main {
     margin-bottom: 0;
 }
 
+.bio a {
+    color: var(--text);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.bio a:hover {
+    color: var(--muted);
+}
+
 .hero-image img {
     width: 100%;
     aspect-ratio: 3 / 4;
@@ -149,43 +165,38 @@ main {
     font-weight: 300;
 }
 
-.writing-list {
-    list-style: none;
+.pub-heading {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-top: 1.25rem;
+    margin-bottom: 0.35rem;
 }
 
-.writing-item {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: baseline;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
-    border-bottom: 1px solid var(--border);
+.pub-heading:first-child {
+    margin-top: 0;
 }
 
-.writing-title {
-    font-size: 1rem;
-    font-weight: 400;
+.article-list {
+    list-style: disc;
+    padding-left: 1.25rem;
+}
+
+.article-list li {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 0.1rem 0;
+}
+
+.article-list a {
     color: var(--text);
-    text-decoration: none;
-    line-height: 1.4;
-}
-
-.writing-title:hover {
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
 }
 
-.writing-meta {
-    font-size: 0.85rem;
-    color: #555;
-    text-align: right;
-    white-space: nowrap;
-}
-
-.writing-pub {
-    display: block;
-    font-style: italic;
-    margin-bottom: 0.1rem;
+.article-list a:hover {
+    color: var(--muted);
 }
 
 .crimson-link {
@@ -292,12 +303,4 @@ footer {
         font-size: 2.75rem;
     }
 
-    .writing-item {
-        grid-template-columns: 1fr;
-        gap: 0.4rem;
-    }
-
-    .writing-meta {
-        text-align: left;
-    }
 }
